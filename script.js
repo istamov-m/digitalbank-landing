@@ -1,9 +1,3 @@
-// fetch('images/icon-hamburger.svg')
-// .then(res => res.text())
-// .then(svg => {
-//     document.getElementById('hamburger-menu-toggle').innerHTML = svg
-// })
-
 const width = window.innerWidth
 const introBg = document.querySelector('.bg-intro');
 
@@ -15,10 +9,12 @@ if(width < 1400){
 const mobileMenu = document.querySelector('.mobile-menu');
 const toggleMenuBtn = document.querySelector('.toggle-menu')
 const mobileMenuLayout = document.querySelector('.menu-layout');
+const screenFix = document.getElementsByTagName('body');
 
 function toggleMenu(){
     mobileMenu.classList.toggle('active')
     mobileMenuLayout.classList.toggle('active')
+    screenFix[0].classList.toggle('screen-fix')
     
     if(mobileMenu.classList.contains('active')){
         toggleMenuBtn.setAttribute('src', 'images/icon-close.svg');
